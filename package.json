@@ -1,0 +1,29 @@
+{
+  "name": "encrypto",
+  "version": "1.0.0",
+  "description": "Encrypt and Decrypt messages using Electron.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron main.js"
+  },
+  "repository": {
+    "url": "git+https://github.com/Ollen/Encrypto.git",
+    "type": "git"
+  },
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "cryptography",
+    "encryption"
+  ],
+  "author": "Allendale Nato <natoallendale@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ollen/Encrypto/issues"
+  },
+  "homepage": "https://github.com/Ollen/Encrypto#readme",
+  "dependencies": {
+    "electron-prebuilt": "^1.4.5"
+  }
+}
