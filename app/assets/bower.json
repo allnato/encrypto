@@ -1,0 +1,26 @@
+{
+  "name": "Encrypto",
+  "homepage": "https://github.com/Ollen/Encrypto",
+  "authors": [
+    "Allendale Nato <natoallendale@gmail.com>"
+  ],
+  "description": "Encrypt and Decrypt messages in Electron.",
+  "main": "",
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "cryptography",
+    "ecryption"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
