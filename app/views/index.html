@@ -24,6 +24,12 @@
       button.shoes{
         margin-top: 20px;
       }
+      .wrapper{
+        padding-bottom: 40px;
+      }
+      .shift-input{
+        margin: 0 auto;
+      }
     </style>
   </head>
 
@@ -32,23 +38,32 @@
       <div class="jumbotron">
         <div class="container">
           <h1>Encrypto <span class="glyphicon glyphicon-search" aria-hidden="true"></span></h1>
-          <p>A simple cryptography application.</p>
+          <p>Encrypt and Decrypt Messages.</p>
 
         </div>
       </div>
       <div class="container-fluid">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
               <h3 class="text-center">Original</h3>
-              <textarea id="eTextArea" rows="10" class="form-control"></textarea>
+              <textarea id="eTextArea" rows="10" class="form-control" placeholder="Enter the text you want to encrypt."></textarea>
               <button class="shoes btn btn-primary center-block">Encrypt</button>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
               <h3 class="text-center">Encrypted</h3>
-              <textarea id="dTextArea" rows="10" class="form-control"></textarea>
+              <textarea id="dTextArea" rows="10" class="form-control" placeholder="Enter the text you want to decrypt."></textarea>
               <button class="shoes btn btn-primary center-block">Decrypt</button>
             </div>
           </div>
+
+
+          <div class="row">
+            <div class="input-group shift-input">
+              <h4 class="text-center">Shift</h4>
+              <input type="number" class="form-control text-center" id="shift" name="shift" placeholder="3">
+            </div>
+          </div>
+
         </div>
       </div>
   </body>
@@ -59,6 +74,7 @@
   <!-- normal script imports etc  -->
   <script src="../assets/jquery/jquery.min.js"></script>
   <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/js/caesarShift.js"></script>
 
   <!-- Insert this line after script imports -->
   <script>if (window.module) module = window.module;</script>
