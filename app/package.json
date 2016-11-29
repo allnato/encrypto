@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Ollen/Encrypto#readme",
   "dependencies": {
-    "electron-prebuilt": "^1.4.5"
+    "electron-prebuilt": "^1.4.5",
+    "noty": "^2.3.8"
   }
 }
