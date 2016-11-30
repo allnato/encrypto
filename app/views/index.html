@@ -49,6 +49,7 @@
       <div class="container-fluid">
         <ul class="nav nav-tabs" role="tablist">
           <li class="active"><a href="#caesar" role="tab" data-toggle="tab">Caesar Cipher</a></li>
+          <li><a href="#base64" role="tab" data-toggle="tab">Base 64</a></li>
           <li><a href="#honey" role="tab" data-toggle="tab">Honey</a></li>
         </ul>
         <div class="tab-content">
@@ -75,6 +76,22 @@
             </div>
           </div>
 
+          <!-- Base64 Tab -->
+          <div class="tab-pane fade" id="base64">
+            <div class="" id="base64AlertContainer"></div>
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="text-center">Original</h3>
+                <textarea id="eBase64Text" rows="10" class="form-control" placeholder="Enter the text you want to encrypt."></textarea>
+                <button class="shoes btn btn-primary center-block" id="base64Encrypt">Encrypt</button>
+              </div>
+              <div class="col-sm-6">
+                <h3 class="text-center">Encrypted</h3>
+                <textarea id="dBase64Text" rows="10" class="form-control" placeholder="Enter the text you want to decrypt."></textarea>
+                <button class="shoes btn btn-primary center-block" id="base64Decrypt">Decrypt</button>
+              </div>
+            </div>
+          </div>
           <!-- Encrypto Tab -->
           <div class="tab-pane fade" id="honey">
             Hi
@@ -100,6 +117,7 @@
 
   </script>
   <script src="../caesar.js"></script>
+  <script src="../base64.js"></script>
   <script src="../honey.js"></script>
 
 </html>

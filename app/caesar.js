@@ -1,4 +1,5 @@
 $('#caesarEncrypt').click(function(event) {
+  $('#caesarAlertContainer').empty();
   var encryptMessage = $('#eTextArea').val().trim();
   var shiftVal = $('#shift').val().trim();
 
@@ -16,6 +17,7 @@ $('#caesarEncrypt').click(function(event) {
 });
 
 $('#caesarDecrypt').click(function(event) {
+  $('#caesarAlertContainer').empty();
   var encryptMessage = $('#dTextArea').val().trim();
   var shiftVal = $('#shift').val().trim();
 
