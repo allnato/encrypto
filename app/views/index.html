@@ -50,6 +50,7 @@
         <ul class="nav nav-tabs" role="tablist">
           <li class="active"><a href="#caesar" role="tab" data-toggle="tab">Caesar Cipher</a></li>
           <li><a href="#base64" role="tab" data-toggle="tab">Base 64</a></li>
+          <li><a href="#hex" role="tab" data-toggle="tab">Hex</a></li>
           <li><a href="#honey" role="tab" data-toggle="tab">Honey</a></li>
         </ul>
         <div class="tab-content">
@@ -92,6 +93,23 @@
               </div>
             </div>
           </div>
+
+          <!-- Hex Tab -->
+          <div class="tab-pane fade" id="hex">
+            <div class="" id="hexAlertContainer"></div>
+            <div class="row">
+              <div class="col-sm-6">
+                <h3 class="text-center">Original</h3>
+                <textarea id="eHexText" rows="10" class="form-control" placeholder="Enter the text you want to encrypt."></textarea>
+                <button class="shoes btn btn-primary center-block" id="hexEncrypt">Encrypt</button>
+              </div>
+              <div class="col-sm-6">
+                <h3 class="text-center">Encrypted</h3>
+                <textarea id="dHexText" rows="10" class="form-control" placeholder="Enter the text you want to decrypt."></textarea>
+                <button class="shoes btn btn-primary center-block" id="hexDecrypt">Decrypt</button>
+              </div>
+            </div>
+          </div>
           <!-- Encrypto Tab -->
           <div class="tab-pane fade" id="honey">
             Hi
@@ -116,8 +134,10 @@
   <script>
 
   </script>
+  <!-- JS Encodings -->
   <script src="../caesar.js"></script>
   <script src="../base64.js"></script>
+  <script src="../hex.js"></script>
   <script src="../honey.js"></script>
 
 </html>
