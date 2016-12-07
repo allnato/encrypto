@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/toggle/css/bootstrap-toggle.min.css">
     <style media="screen">
       html,body{
         height: 100%;
@@ -46,6 +47,9 @@
       .letter-container{
         width: 5%;
         margin: 10px;
+      }
+      .honeySettings{
+        margin-top: 25px;
       }
     </style>
   </head>
@@ -148,6 +152,28 @@
                     <h3 class="text-center">Encrypted</h3>
                     <textarea id="dHoneyText" rows="10" class="form-control" placeholder="Enter the text you want to decrypt."></textarea>
                     <button class="shoes btn btn-primary center-block" id="honeyDecrypt">Decrypt</button>
+                  </div>
+                </div>
+                <div class="honeySettings">
+                  <div class="row">
+                    <div class="col-sm-offset-4 col-sm-4 well">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="text-center">Configurations: </h4>
+                        </div>
+                      </div>
+                      <div class="row text-center">
+                        <div class="col-sm-6">
+                          <p>Shift</p>
+                          <input type="number" id="honeyShift" class="form-control text-center" value="1">
+                        </div>
+                        <div class="col-sm-6">
+                          <p>Dictionary</p>
+                          <input type="checkbox" checked data-toggle="toggle"
+                           data-onstyle="success" data-offstyle="danger" id="dictToggle" data-width="100%">
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -301,6 +327,7 @@
 
                 </div>
                 <div class="text-right">
+                  <h4 class="pull-left text-danger err-dict" style="display: none">Please fill-up the missing letters.</h4>
                   <button class="btn btn-info btn-lg" id="honeyEdit">Edit</button>
                   <button class="btn btn-success btn-lg" disabled="disabled" id="honeyApply">Apply Changes</button>
                 </div>
@@ -319,13 +346,14 @@
   <!-- normal script imports etc  -->
   <script src="../assets/jquery/jquery.min.js"></script>
   <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/toggle/js/bootstrap-toggle.min.js"></script>
   <script src="../assets/js/caesarShift.js"></script>
 
   <!-- Insert this line after script imports -->
   <script>if (window.module) module = window.module;</script>
 
   <script>
-
+    $('#dictToggle').bootstrapToggle();
   </script>
   <!-- JS Encodings -->
   <script src="../caesar.js"></script>
