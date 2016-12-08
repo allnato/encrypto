@@ -543,6 +543,10 @@ noty@^2.3.8:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/noty/-/noty-2.3.8.tgz#5aeb71878e4ed2ebd58c88319cbfd7fb213b1f08"
 
+npm-array-rotation@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/npm-array-rotation/-/npm-array-rotation-1.0.1.tgz#77cbf2d29dc48c0cb1ac6ec056be3d5d5c7dd875"
+
 nugget@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/nugget/-/nugget-2.0.1.tgz#201095a487e1ad36081b3432fa3cada4f8d071b0"
