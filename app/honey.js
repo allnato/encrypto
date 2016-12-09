@@ -49,6 +49,11 @@ $('#honeyEncrypt').click(function(event) {
   honeyEncrypt();
 });
 
+// Decrypt Button is clicked
+$('#honeyDecrypt').click(function(event) {
+  honeyDecrypt();
+});
+
 function checkDictIfEmpty(){
   var isEmpty = true;
   $('.letter-container input').each(function(i, obj){
@@ -70,6 +75,21 @@ function honeyEncrypt(){
   }
   encryptMessage = buildDictionary(encryptMessage)
   console.log(encryptMessage);
+  $('#dHoneyText').val(encryptMessage)
+}
+
+function honeyDecrypt(){
+  var decryptMessage = $('#dHoneyText').val();
+
+  if($('#dictToggle').prop('checked')){
+    decryptMessage = decryptDictionary(decryptMessage);
+    console.log(decryptMessage);
+    $('#eHoneyText').val(decryptMessage);
+  } else {
+    decryptMessage = shiftDecrypt(decryptMessage);
+    console.log(decryptMessage);
+    $('#eHoneyText').val(decryptMessage);
+  }
 }
 
 function buildDictionary(message){
@@ -97,5 +117,47 @@ function buildDictionary(message){
 
   }
 
+  return buffer;
+}
+
+function decryptDictionary(message){
+  var buffer = "";
+  var index;
+  shiftDict = arrayRotation.rotateLeft(userDict, parseInt($('#honeyShift').val()));
+  for(i = 0; i < message.length ; i++){
+    index = shiftDict.indexOf(message[i].toUpperCase());
+    if(index == -1){
+      index = shiftDict.indexOf(message[i].toLowerCase());
+    }
+    if(index > -1){
+      if(message[i] == message[i].toLowerCase()){
+        buffer += dictionary[index].toLowerCase();
+      } else {
+        buffer += dictionary[index].toUpperCase();
+      }
+    } else {
+      buffer += message[i];
+    }
+  }
+  return buffer;
+
+}
+
+function shiftDecrypt(message){
+  var buffer = "";
+  var index;
+  shiftDict = arrayRotation.rotate(dictionary, parseInt($('#honeyShift').val()));
+  for(i = 0; i < message.length ; i++){
+    index = shiftDict.indexOf(message[i].toUpperCase());
+    if(index > -1){
+      if(message[i] == message[i].toLowerCase()){
+        buffer += dictionary[index].toLowerCase();
+      } else {
+        buffer += dictionary[index].toUpperCase();
+      }
+    } else {
+      buffer += message[i];
+    }
+  }
   return buffer;
 }
