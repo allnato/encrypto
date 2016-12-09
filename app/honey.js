@@ -67,29 +67,51 @@ function checkDictIfEmpty(){
 
 function honeyEncrypt(){
   var encryptMessage = $('#eHoneyText').val();
+  console.log(encryptMessage);
   // Shift user dictionary
   shiftDict = arrayRotation.rotate(dictionary, parseInt($('#honeyShift').val()));
   // Check if dictionary is enabled
   if($('#dictToggle').prop('checked')){
     shiftDict = arrayRotation.rotate(userDict, parseInt($('#honeyShift').val()));
+    console.log(encryptMessage);
   }
+  // Dictionary & Shift
   encryptMessage = buildDictionary(encryptMessage)
   console.log(encryptMessage);
-  $('#dHoneyText').val(encryptMessage)
+  // Base64
+  encryptMessage = Buffer(encryptMessage).toString('base64');
+  console.log(encryptMessage);
+  // Hex
+  encryptMessage = Buffer(encryptMessage).toString('hex');
+  console.log(encryptMessage);
+  // Base64
+  encryptMessage = Buffer(encryptMessage).toString('base64');
+  console.log(encryptMessage);
+  $('#dHoneyText').val(encryptMessage);
 }
 
 function honeyDecrypt(){
   var decryptMessage = $('#dHoneyText').val();
+  console.log(decryptMessage);
+  // Base64
+  decryptMessage = Buffer(decryptMessage, 'base64').toString();
+  console.log(decryptMessage);
+  // Hex
+  decryptMessage = Buffer(decryptMessage, 'hex').toString();
+  console.log(decryptMessage);
+  // Base64
+  decryptMessage = Buffer(decryptMessage, 'base64').toString();
+  console.log(decryptMessage);
 
+  // Dictionary & Shift
   if($('#dictToggle').prop('checked')){
     decryptMessage = decryptDictionary(decryptMessage);
     console.log(decryptMessage);
-    $('#eHoneyText').val(decryptMessage);
   } else {
     decryptMessage = shiftDecrypt(decryptMessage);
     console.log(decryptMessage);
-    $('#eHoneyText').val(decryptMessage);
   }
+  $('#eHoneyText').val(decryptMessage);
 }
 
 function buildDictionary(message){
