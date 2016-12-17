@@ -354,11 +354,17 @@
 
   <script>
     $('#dictToggle').bootstrapToggle();
+    $.valHooks.textarea = {
+    get: function(elem) {
+        return elem.value.replace(/\r?\n/g, "\r\n");
+    }
+  };
   </script>
   <!-- JS Encodings -->
   <script src="../caesar.js"></script>
   <script src="../base64.js"></script>
   <script src="../hex.js"></script>
+  <script src="../xor.js"></script>
   <script src="../honey.js"></script>
 
 </html>
