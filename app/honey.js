@@ -91,10 +91,19 @@ function honeyEncrypt(){
   encryptMessage = Buffer(encryptMessage).toString('base64');
   console.log(encryptMessage);
   $('#dHoneyText').val(encryptMessage);
+
+  // Fibonacci
+  encryptMessage = fiboEncrypt(encryptMessage);
+  console.log(encryptMessage);
+  $('#dHoneyText').val(encryptMessage);
+
 }
 
 function honeyDecrypt(){
   var decryptMessage = $('#dHoneyText').val();
+  console.log(decryptMessage);
+  // Fibonacci
+  decryptMessage = fiboDecrypt(decryptMessage);
   console.log(decryptMessage);
   // Base64
   decryptMessage = Buffer(decryptMessage, 'base64').toString();
