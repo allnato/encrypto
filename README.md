@@ -6,7 +6,7 @@ Written in Javascript that runs under the [Electron](http://electron.atom.io/) f
 This program requires [nodejs](https://nodejs.org/en/) and [Electron](http://electron.atom.io/)
 
 ## Installing
-In the command line, go to the FileRecovery \app directory and install npm dependencies
+In the command line, go to the Encrypto\app directory and install npm dependencies
 ```
 npm install
 ```
