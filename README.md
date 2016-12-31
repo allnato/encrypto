@@ -1,5 +1,5 @@
 # Encrypto
-A collection of various ciphers and encodings. <br/>
+A collection of different ciphers and encodings. <br/>
 Written in Javascript that runs under the [Electron](http://electron.atom.io/) framework.<br/>
 
 ## Getting Started
